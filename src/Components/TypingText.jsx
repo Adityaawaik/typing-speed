@@ -16,27 +16,33 @@ const TypingText = () => {
     <>
       <Timer />
 
-      <div className="flex justify-center text-justify">
-        <div className="text-center mt-4 mb-4 w-[80%] bg-[#696969] p-8 rounded-2xl shadow-[1px_1px_4px_0px_white] ">
-          <h1 className="ml-4 text-3xl text-start mb-4 text-cyan-400 font-bold">
-            Pratice Before You Start
+      <div className="flex justify-center px-4">
+        <div className="mt-4 mb-4 w-full max-w-225 bg-[#696969]/90 backdrop-blur-sm p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg">
+          <h1 className="text-lg sm:text-xl md:text-3xl text-start mb-4 text-cyan-400 font-bold">
+            Practice Before You Start
           </h1>
-          {randomText.split("").map((letter, index) => {
-            let color = "text-white-500";
 
-            if (index < currentText.length) {
-              color =
-                currentText[index] === letter
-                  ? "text-green-500"
-                  : "text-red-700";
-            }
+          <div className="wrap-break-word-break-words leading-relaxed">
+            {randomText.split("").map((letter, index) => {
+              let color = "text-white";
 
-            return (
-              <span key={index} className={`${color} text-4xl`}>
-                {letter}
-              </span>
-            );
-          })}
+              if (index < currentText.length) {
+                color =
+                  currentText[index] === letter
+                    ? "text-green-400"
+                    : "text-red-400";
+              }
+
+              return (
+                <span
+                  key={index}
+                  className={`${color} text-2xl sm:text-3xl md:text-4xl font-semibold`}
+                >
+                  {letter}
+                </span>
+              );
+            })}
+          </div>
         </div>
       </div>
 
