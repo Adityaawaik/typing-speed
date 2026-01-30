@@ -1,6 +1,6 @@
 # React + Vite
 
-<a href="https://adityaawaik.github.io/typing-speed/"> Know your speed here </a>
+# <a href="https://adityaawaik.github.io/typing-speed/"> Know your speed here </a>
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
